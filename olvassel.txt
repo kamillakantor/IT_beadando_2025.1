@@ -15,3 +15,5 @@ Megjegyzés: A képfájlok minta/placeholder jellegűek. Cseréld őket jogtiszt
 
 A weboldalon található tartalmak:
     - a favicon és logo AI generált
+Az oldal vázát AI generálta
+
