@@ -73,9 +73,7 @@ function createRecipeCard(recipe) {
 
     //rárárárámenegetés a html5 localstorage-be
     localStorage.setItem("shoppingList_simple", JSON.stringify(items));
-      // Dinamikus útvonal, amely GitHub Pages-en is működik
-      let basePath = window.location.pathname.split('/').slice(0, -1).join('/');
-      window.location.href = basePath + "/lista.html";
+    window.location.href = "lista.html";
   });
 
   return card;
