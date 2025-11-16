@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (ok) {
-      alert("Köszönjük! A beküldés demó üzemmódban sikeres.");
+      alert("Köszönjük! A beküldés sikeres.");
       form.reset();
       if (servingsOut) {
         servingsOut.textContent = "4";

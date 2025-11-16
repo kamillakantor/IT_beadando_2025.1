@@ -46,7 +46,7 @@ function createRecipeCard(recipe) {
   let listLink = document.createElement("a");
   listLink.className = "btn btn--secondary";
   listLink.href = "lista.html";
-  listLink.textContent = "Hozzávalók listához";
+  listLink.textContent = "Listához adás";
   actions.appendChild(listLink);
 
   //kattintásra hozzzáadás a listához
