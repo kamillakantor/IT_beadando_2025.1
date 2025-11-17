@@ -4,16 +4,33 @@ Kántor Kamilla, AHIB49
 Github link: https://kamillakantor.github.io/IT_beadando_2025.1/
 Téma: Receptajánló weboldal bevásárlólista funkcióval. A felhasználó recepteket böngészhet, a hozzávalókat egy kattintással bevásárlólistára teheti.
 Saját JS kód:
- - js/lista.js: Bevásárlólista (hozzáadás/törlés/pipa, szűrés, drag & drop vizuális rendezés), localStorage mentés.
- - js/jatek.js: „Gyors séf” reflexjáték (időzítő, pontozás, toplista localStorage-ban).
+ - js/lista.js: Bevásárlólista: A felhasználó saját tételeket adhat a listához, valamint a receptcardokból is behúzhat hpzzávalókat, ezeket a program local storageban tárolja. A lista elemei checkboxok, ki lehet őket pipálni, és e szerint szűrni vasgy  törölni. Minden elem törlése egy gombbal lehetséges.
  - js/receptek.js: Listázás és szűrés (kategória, nehézség, idő, kereső).
  - js/recept.js: Részletnézet és hozzávalók átadása (URL param + localStorage queue).
- - js/form.js: Receptbeküldő űrlap kliens oldali validálással (legalább 7 különböző mező és 5+ validáció).
+ - js/form.js: Receptbeküldő űrlap kliens oldali validálással. A felhasználó saját receptet küldhet be az inputmezők segítségével, az adatok helyességét a js ellenőrzi.
 Használt egyedi font: Google Fonts – Poppins (UI), Merriweather (szöveg). Lásd: css/style.css.
-Külső források: Nincs (a projekt saját, oktatási célú boilerplate). Ha később snippetet használsz, pontos link + fájlnév + sorszám itt tüntetendő fel.
-Megjegyzés: A képfájlok minta/placeholder jellegűek. Cseréld őket jogtiszta képekre.
+
 
 A weboldalon található tartalmak:
     - a favicon és logo AI generált
 Az oldal vázát AI generálta
+ChatGPT Plus
 
+képek forrásai:
+    zoldségleves kép: https://www.google.com/url?sa=i&url=https%3A%2F%2Fsobors.hu%2Freceptek%2Fizletes-zoldsegleves-recept%2F&psig=AOvVaw0IEZIlfdZxNvG5f16NQ7Gx&ust=1761836309257000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLDhnJvWyZADFQAAAAAdAAAAABAE
+    palacsintakép: https://image-api.nosalty.hu/nosalty/images/recipes/YM/CG/edes-palacsinta-alapteszta.jpg?w=1200&h=675&s=366db77f1bee616ef2a0dca40dfa8d6b
+    csirkepaprikas: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.gasztrotrend.hu%2Frecept%2Ftejfolos-csirkepaprikas%2F&psig=AOvVaw2fPZ29otoPtiqT03rZmJz5&ust=1762598771514000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPjomqDu35ADFQAAAAAdAAAAABAE
+    gulyasleves: https://www.nosalty.hu/recept/tradicionalis-gulyasleves
+    rantotthus: https://www.bestofhungary.co.uk/blogs/recipes/rantott-hus-wiener-schnitzel?srsltid=AfmBOoo5p0UQMVHr4HtgnRgsi7ytQSacqym4mYFN4fS_V9hJbuFkK3yZ
+    rantotta: https://sobors.hu/receptek/rantotta-keszitese/
+    paprikas csirke: https://sobors.hu/receptek/paprikas-csirke-recept/
+    lecso: https://streetkitchen.hu/receptek/lecso-alaprecept
+    turos palacsinta: https://www.mindmegette.hu/recept/alap-turos-palacsinta
+    somloi galuska: https://www.mindmegette.hu/recept/somloi-galuska-az-eredeti-recept-alapjan
+    tojassalata: https://www.nosalty.hu/ajanlo/legkremesebb-tojassalata-egyszeru-gyors-recept
+    bolognai spagetti: https://www.nosalty.hu/recept/gyors-bolognai-spagetti
+    rakott zoldseg: https://streetkitchen.hu/receptek/rakott-vegyes-zoldseg
+    paradicsomos mozzarella sallata: https://femina.hu/recept/caprese-receptje/
+    zoldseges rizs: https://femina.hu/recept/zoldseges-rizs/
+    zabpalacsinta: https://www.nosalty.hu/recept/amerikai-zabpalacsinta
+    Sült padlizsán fokhagymás joghurttal: https://www.nosalty.hu/recept/grillezett-padlizsan-fokhagymas-dios-granatalmas-joghurtszosszal

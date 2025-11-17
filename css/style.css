@@ -9,6 +9,7 @@
 }
 
 :root {
+    /* Színváltozók: egységes téma használata az egész oldalon */
     --primary: #389c3f; /* természetes zöld */
     --accent: #A5D6A7;
     --danger: #f96060;
@@ -37,6 +38,8 @@ img {
     display: block;
 }
 
+/* Képek: alapértelmezés szerint reszponzívak, így nem törik meg a layout mobilon sem. */
+
 a {
     color: var(--primary);
     text-decoration: none;
@@ -46,11 +49,15 @@ a:hover {
     text-decoration: underline;
 }
 
+/* link hover: aláhúzás vizuális visszajelzésként */
+
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 1rem;
 }
+
+/* .container: központi tartalmi konténer — belső padding biztosít távolságot a szélektől */
 
 .site-header {
     position: sticky;
@@ -63,6 +70,8 @@ a:hover {
     gap: 1rem;
     padding: .5rem 1rem;
 }
+
+/* A fejléc pozícionált és ragadós (sticky) — így mindig látható a lap tetején görgetés közben. */
 
 .logo {
     display: flex;
@@ -97,6 +106,9 @@ a:hover {
     cursor: pointer;
 }
 
+/* A .menu-toggle a mobil menühöz kell: alapból rejtett (desktopon nincs rá szükség),
+   mobilon megjelenik és a JavaScript hozzáad/eltávolítja a .site-nav.open osztályt. */
+
 .rec {
     color: #2E7D32;
 }
@@ -107,6 +119,8 @@ a:hover {
 .filters{
     padding: 5px;
 }
+
+/* Szűrő blokk: kis belső térköz a form elemei között, olvashatóság céljából */
 
 .site-nav {
     display: flex;
@@ -122,6 +136,8 @@ a:hover {
 .site-nav a:hover {
     background: #f3f4f6;
 }
+
+/* Navigáció hover: világos háttérrel jelezzük a fókuszált elemet */
 
 @media (max-width: 768px) {
     .site-nav {
@@ -150,6 +166,9 @@ a:hover {
     }
 }
 
+/* Mobil nézet: a navigáció panel lebegő blokká válik, amelyet a menü gombbal lehet megnyitni.
+   A .site-nav.open osztályt a JS fűzi hozzá, amikor a felhasználó megnyitja a menüt. */
+
 .site-footer {
     text-align: center;
     padding: 2rem 1rem;
@@ -163,6 +182,8 @@ a:hover {
     color: white;
     margin: 1rem 0;
 }
+
+/* Hero: a sötét réteg (linear-gradient) segít, hogy a fehér szöveg jól olvasható legyen kép esetén is. */
 
 .hero__content {
     max-width: 720px;
@@ -201,6 +222,8 @@ a:hover {
     transition: transform 0.2s;
 }
 
+/* Általános gombstílus: enyhe felskálázás hover alatt, ez a vizuális visszajelzés. */
+
 .btn--secondary {
     background: #2F3640;
 }
@@ -218,6 +241,14 @@ a:hover {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
+
+.grid_cards img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Kártyarács: több oszlopos elrendezés asztali nézetre; gap adja a kártyák közötti távolságot */
 .grid_cards img{
     width: 100%;
     height: 200px;
@@ -228,11 +259,15 @@ a:hover {
     transition: transform 0.2s;
 }
 
+/* kártya hover: finom nagyítás, hogy interaktívnak tűnjön a kártya */
+
 @media (max-width: 992px) {
     .grid_cards .card-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* Reszponzív: köztes méreteknél két oszlopra váltunk, hogy ne legyen túl zsúfolt a megjelenés */
 
 @media (max-width: 576px) {
     .grid_cards .card-grid {
@@ -249,11 +284,15 @@ a:hover {
     flex-direction: column;
     box-shadow: 0 10px 30px rgba(0,0,0,.05);
 }
+
+/* .card: kártya konténer — flex oszlop, így a tartalom és a gombok könnyen rendezhetők */
 .card img{
     width: 100%;
     height: 150px;
     object-fit: cover;
 }
+
+/* kártyaképek: fix magasság, object-fit: cover biztosítja az esztétikus kivágást */
 
 .card__body {
     padding: 10px 10px 5px 10px;
@@ -262,6 +301,8 @@ a:hover {
     gap: .25rem;
     flex: 1;
 }
+
+/* Kártyák: a .card__body flex oszlop, így a gombok mindig a kártya alján helyezkednek el (margin-top: auto használatával). */
 
 .card__title {
     font-size: 1.1rem;
@@ -292,6 +333,8 @@ a:hover {
     gap: 1rem;
 }
 
+/* Recept részletek: speciális doboz, itt jelennek meg kép, meta és lépések. Grid layoutkal könnyebb a rendezés. */
+
 .recipe-detail .meta {
     display: flex;
     gap: 1rem;
@@ -305,8 +348,10 @@ a:hover {
     padding: 1rem;
 }
 
+/* Hozzávalók doboza: külön világos hátteret kap, hogy elkülönüljön az elkészítési lépésektől. */
+
 .recipe-detail .steps {
-    counter-reset: step;
+    counter-reset: step;                        /* lépésszámozás inicializálása */
 }
 
 .recipe-detail .steps li {
@@ -343,6 +388,8 @@ a:hover {
     padding: .5rem;
 }
 
+/* Bevásárló lista: minden tétel soron belül rugalmasan helyezkedik el (checkbox, szöveg, gombok). */
+
 .shopping__item.done {
     opacity: .6;
     text-decoration: line-through;
@@ -360,16 +407,6 @@ a:hover {
     display: flex;
     align-items: center;
     gap: .5rem;
-}
-
-.game .arena {
-    position: relative;
-    min-height: 320px;
-    background: white;
-    border: 1px dashed #ddd;
-    border-radius: 16px;
-    margin-top: 1rem;
-    overflow: hidden;
 }
 
 .ingredient {
@@ -399,13 +436,15 @@ a:hover {
     min-height: 1.2em;
 }
 
+/* Form hibák: fix magasságot tartunk a .error mezőknek, így nem ugrik el a layout amikor hibaüzenet jelenik meg/tűnik. */
+
 .form .form-actions {
     display: flex;
     gap: .5rem;
     margin-top: 1rem;
 }
 
-.sr-only {
+.sr-only {                      /* hozzáférhetőségi segédosztály — csak képernyőolvasók látják, vizuálisan rejtett elem. */
     position: absolute;
     width: 1px;
     height: 1px;
@@ -415,3 +454,5 @@ a:hover {
     clip: rect(0,0,0,0);
     border: 0;
 }
+
+/* .sr-only: hozzáférhetőségi segédosztály — csak képernyőolvasók látják, vizuálisan rejtett elem. */

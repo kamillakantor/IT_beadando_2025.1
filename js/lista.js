@@ -38,7 +38,7 @@ function renderShoppingList() {
   for (let i = 0; i < shoppingItems.length; i++) {
     let item = shoppingItems[i];
 
-    //ha be van jelove h ne mutassa a kolega akkor simán nyomja a continue-ot
+    //ha kesz akkor tovabb ne mutassa
     if (hideDone && item.done) {
       continue;
     }
@@ -48,17 +48,17 @@ function renderShoppingList() {
       if (item.done) {
         li.className += " done";    //ha kész van, akkor done osztály hozzáadása
       }
-      li.setAttribute("data-index", i);         //index attribútum beállítása a későbbi azonosításhoz
+      li.setAttribute("data-index", i);         //későbbi azonosításhoz
 
 
       //csekkboksz a készre jelöléshez
       let checkbox = document.createElement("input");
       checkbox.type = "checkbox";
-      checkbox.checked = !!item.done;     //két felkiáltójel booleanná alakítja
+      checkbox.checked = !!item.done;     //booleanná alakítja
       checkbox.className = "chk";
       //ha megváltozik a csekkboksz állapota, frissíti a tétel állapotát és elmenti
       checkbox.addEventListener("change", function (event) {
-        let index = parseInt(event.target.parentNode.getAttribute("data-index"), 10);       //10-es számrendszerben értelmezi az indexet és kiokoskodja a szülő elemből h meylik elem
+        let index = parseInt(event.target.parentNode.getAttribute("data-index"), 10);       // kiokoskodja a szülő elemből h meylik elem
         shoppingItems[index].done = event.target.checked;   //frissíti a done állapotot
         saveShoppingList();
         renderShoppingList();         //újrarendereli a listát
