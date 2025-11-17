@@ -120,7 +120,7 @@ function renderRecipeDetail() {
   let addToListBtn = document.createElement('a');
   addToListBtn.className = 'btn btn--secondary';
   addToListBtn.href = './lista.html';
-  addToListBtn.textContent = 'Hozzávalók listához';
+  addToListBtn.textContent = 'Hozzávalók bevásárlólistához adása';
   actionsDiv.appendChild(addToListBtn);
 
   header.appendChild(actionsDiv);
