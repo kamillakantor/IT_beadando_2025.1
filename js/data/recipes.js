@@ -1,5 +1,5 @@
 
-var RECIPES = [
+var RECIPES = [                         // export const helyett var h egyszerűbb legyeen a kód sorry not sorry
   {
     id: "csirkepaprikas",
     title: "Csirkepaprikás",
